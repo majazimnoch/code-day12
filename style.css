@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200;500&display=swap');
+
+body {
+    background-color: rgb(30, 29, 29);
+    color: #f5f2f2;
+    font-family: 'Bitter', serif;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 5rem;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+
+    @media (max-width: 1023px) {
+        flex-direction: column;
+    }
+}
+
+img {
+    width: 250px;
+}
